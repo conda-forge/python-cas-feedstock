@@ -1,5 +1,5 @@
 {% set name = "python-cas" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.1" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python-cas-{{ version }}.tar.gz
-  sha256: b8f1dcb1b6c56b3ff4f86bbef47bcdfcf932061ccd4812ae35e3f63954dfdb28
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8df85add9a02a02f33270642ba1e5b2e319c340a30bd00741011584beb2282fa
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
